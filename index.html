@@ -1,11 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asif | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .section {
+      padding: 80px 0;
+    }
+    .project-card {
+      transition: all 0.3s ease-in-out;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .footer {
+      background-color: #1f1c2c;
+      color: white;
+      padding: 40px 0;
+    }
+    a {
+      text-decoration: none;
+    }
+    .card-title {
+      font-weight: bold;
+    }
+    .card-body {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello Asif</h1>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Asif</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>Hi, I'm Asif</h1>
+    <p class="lead">Frontend Developer | Vue.js & Tailwind Expert</p>
+    <a href="#projects" class="btn btn-outline-light mt-3">View My Work</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+  <div class="container text-center">
+    <h2 class="mb-4">About Me</h2>
+    <p class="lead">I specialize in building modern, responsive, and user-friendly web interfaces using Vue.js, Quasar, and Tailwind CSS. I'm passionate about clean code, performance, and pixel-perfect design.</p>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section bg-light" id="projects">
+  <div class="container">
+    <h2 class="text-center mb-5">Projects</h2>
+    <div class="row g-4">
+      <script>
+        const projects = [
+          "https://vuexamguide.com",
+          "https://lussoandvinci.com/",
+          "https://taaply.com",
+          "https://vlinq.co",
+          "https://horizam.com",
+          "https://innovorbs.netlify.app",
+          "https://themedicators.com/",
+          "https://www.renderhealth.com/",
+          "https://bamkoles.com/",
+          "https://visiolab.io/",
+          "https://www.fineformsarchitects.com/",
+          "https://smartcard.mtn.cm/",
+          "https://powell-s.netlify.app/",
+          "https://digitalagency1.netlify.app/",
+          "https://bistury.netlify.app/",
+          "https://premier-medicaid1.netlify.app/",
+          "https://techystar.netlify.app/",
+          "https://react-chakra-project.netlify.app/",
+          "https://fycle.netlify.app/",
+          "https://taaply-order-invoice.netlify.app/",
+          "https://resturant-menu-card.netlify.app/",
+          "https://digital-profilee.netlify.app/",
+          "https://jovial-dragon-70b42e.netlify.app/",
+          "https://debitcardreader-nfc-emv.netlify.app/",
+          "https://asif-reachout.netlify.app/"
+        ];
+        document.write(projects.map(link => {
+          const clean = link.replace("https://", "").replace("www.", "").split("/")[0];
+          const name = clean.replace(/[-.]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+          return `
+          <div class="col-md-4">
+            <div class="card project-card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">${name}</h5>
+                <a href="${link}" target="_blank" class="btn btn-outline-primary mt-2">Visit Site</a>
+              </div>
+            </div>
+          </div>`;
+        }).join(""));
+      </script>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="text-center mb-4">Let's Connect</h2>
+    <div class="text-center">
+      <p class="lead">Feel free to reach out to me on social media:</p>
+      <p>
+        <a href="https://www.instagram.com/asif.reachout" target="_blank" class="btn btn-outline-dark m-2">Instagram</a>
+        <a href="https://www.twitter.com/asif-reachout" target="_blank" class="btn btn-outline-dark m-2">Twitter</a>
+        <a href="https://www.linkedin.com/in/asif-reachout" target="_blank" class="btn btn-outline-dark m-2">LinkedIn</a>
+        <a href="https://www.github.com/asif-reachout" target="_blank" class="btn btn-outline-dark m-2">GitHub</a>
+      </p>
+      <p class="mt-4">Or WhatsApp me: <a href="https://wa.me/" class="fw-bold">Click to open chat</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container text-center">
+    <p>&copy; 2025 Asif. All rights reserved.</p>
+    <p>
+      <a href="https://github.com/asif-reachot" target="_blank" class="text-light me-3">GitHub</a>
+      <a href="https://linkedin.com/in/asif_reachot" target="_blank" class="text-light me-3">LinkedIn</a>
+      <a href="https://twitter.com/asif_reachot" target="_blank" class="text-light">Twitter</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
